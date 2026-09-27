@@ -13,10 +13,11 @@ from __future__ import annotations
 from musicmeta.sources.fingerprint import (  # noqa: F401
     ACOUSTID_URL,
     FPCALC_DEFAULT,
+    _resolve_fpcalc,
     fingerprint_file,
     lookup_acoustid,
     recognize,
 )
 
-__all__ = ["ACOUSTID_URL", "FPCALC_DEFAULT", "fingerprint_file",
-           "lookup_acoustid", "recognize"]
+__all__ = ["ACOUSTID_URL", "FPCALC_DEFAULT", "_resolve_fpcalc",
+           "fingerprint_file", "lookup_acoustid", "recognize"]

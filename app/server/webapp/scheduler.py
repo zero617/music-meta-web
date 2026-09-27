@@ -722,6 +722,10 @@ class Scraper(threading.Thread):
                     path, "manual_pending",
                     error="指纹模式未配置 AcoustID Key（配置页填写）")
                 return
+            # 自定义 fpcalc 路径：透传给指纹模块（插件签名固定，经环境变量桥接）
+            fpcalc_path = cfg.get("fpcalc_path", "").strip()
+            if fpcalc_path:
+                os.environ["FPCALC_PATH"] = fpcalc_path
             try:
                 qq = get_source("qqmusic",
                                 min_interval=float(cfg.get("min_interval", "0.3")))

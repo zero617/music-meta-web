@@ -77,6 +77,7 @@ DEFAULTS: Dict[str, str] = {
     #   fingerprint= 按音频指纹识别（fpcalc → AcoustID → 回查 QQ，需 qqmusic 插件）
     "matching_mode": "filename",
     "acoustid_key": "",              # AcoustID API key（安装向导可配，免费注册 https://acoustid.org/new-application）
+    "fpcalc_path": "",               # fpcalc 可执行文件路径；空=自动探测（环境变量 FPCALC_PATH / PATH / 常见路径）
     # 用户插件目录（安装向导必填；默认应用数据目录 plugins/）
     "plugins_dir": "",
     # 元数据源（可多选，逗号分隔；候选列表合并显示各源结果，每源最多10条）
